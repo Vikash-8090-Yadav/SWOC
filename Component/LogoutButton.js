@@ -6,8 +6,8 @@ const LogoutButton = ({ handleLogout }) => {
     return (
       <div>
         <button className = "font-bold flex" onClick={handleLogout}>
-            <div className = "max-md:hidden mr-2">LOGOUT</div> 
-            <LogoutIcon/>
+            <div className = "max-md:hidden">LOGOUT</div> 
+            <LogoutIcon size = {25} className = "ml-2" />
         </button>
         </div>
     )

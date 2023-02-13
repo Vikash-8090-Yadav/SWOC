@@ -44,11 +44,12 @@ ul li{
 }
 
 .navbar {
+  margin: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #000;
-  width: 100%;
+  min-width: 100%;
+  overflow: hidden;
   height: 50px;
   padding: 0 1rem;
   color: #fff;

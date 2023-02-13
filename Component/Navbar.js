@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import {Link} from 'react-scroll';
-import {BiHome} from 'react-icons/bi'
+import {AiFillHome} from 'react-icons/ai'
 import {FcAbout} from 'react-icons/fc'
 import {GrMail} from 'react-icons/gr'
 import LogoutButton from "../Component/LogoutButton"
@@ -16,7 +16,7 @@ const Navbar = ({ handleLogout }) => {
           link: "Home",
           child: (
             <>
-              <BiHome size = {25} />
+              <AiFillHome size = {25} />
             </>
           ),
         },
@@ -44,8 +44,8 @@ const Navbar = ({ handleLogout }) => {
       <>
         <div className = 'navbar'>
           <div className = "flex">
-            <Image className = "rounded-full ml-3 mr-2" src = {SalDappLogo} height = "0" width = "39" alt = ""/>
-            <h1 className = "text-2xl text-extrabold text-bold font-serif ml-2 text-white font-semibold max-sm:text-xl max-sm:ml-0 max-md:mr-3 font-title">DAPP.eth</h1>
+            <Image className = "rounded-full" src = {SalDappLogo} height = "0" width = "39" alt = ""/>
+            <h1 className = "text-2xl text-extrabold text-bold font-serif ml-2 text-white font-semibold max-sm:text-sm max-sm:ml-1 max-md:mr-3 font-title">DAPP.eth</h1>
           </div>
 
           <ul className = "hidden md:flex text-blue-400">
@@ -62,18 +62,14 @@ const Navbar = ({ handleLogout }) => {
           <ul className = "md:hidden flex text-blue-400 font-extrabold text-xl">
             {
               links.map(({id, link, child}) => (
-                <li key = {id} className = "px-4 cursor-pointer py-6 text-2xl capitalize">
+                <li key = {id} className = "px-4 cursor-pointer py-6 text-2xl capitalize max-sm:px-1">
                   <Link onClick = {() => setNav(!nav)} to={link} smooth duration={5000}>{child}</Link>
                 </li>
               ))}
           </ul>
-                
-          <div className="flex ">     
-            { 
-              <div className = "py-2 px-3 mx-4 my-2 rounded-lg text-white bg-blue-400 font-bold">
-                <LogoutButton handleLogout={handleLogout}/>
-              </div> 
-            } 
+          
+          <div className = "py-2 px-3 m-2 rounded-lg text-white bg-blue-400 font-bold max-sm:p-1 max-sm:m-1">
+            <LogoutButton handleLogout={handleLogout}/>
           </div>
         </div>
       </>

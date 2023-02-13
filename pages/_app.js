@@ -93,7 +93,9 @@ function MyApp({ Component, pageProps = {} }) {
             <ColorRing height = {90}/>
             <div className = "font-semibold text-4xl tracking-widest px-5 text-center">WELCOME TO SAL DAPP</div>
           </div>
+
           ) : !loading && loggedIn ? (
+          
             <div>
               {
                 ready ? (
