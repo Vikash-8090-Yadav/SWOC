@@ -44,8 +44,8 @@ const Navbar = ({ handleLogout }) => {
       <>
         <div className = 'navbar'>
           <div className = "flex">
-            <Image className = "rounded-full" src = {SalDappLogo} height = "0" width = "39" alt = ""/>
-            <h1 className = "text-2xl text-extrabold text-bold font-serif ml-2 text-white font-semibold max-sm:text-sm max-sm:ml-1 max-md:mr-3 font-title">DAPP.eth</h1>
+            <Image className = "rounded-full" src = {SalDappLogo} height = "0" width = "20" alt = ""/>
+            <h1 className = "text-2xl text-extrabold text-bold font-serif ml-2 max-sm:text-sm max-sm:ml-1 max-md:mr-3 font-title">DAPP.eth</h1>
           </div>
 
           <ul className = "hidden md:flex text-blue-400">
