@@ -9,42 +9,43 @@ import Image from "next/image"
 
 const Navbar = ({ handleLogout }) => {
     const [nav, setNav] = useState(false);
-    
     const links = [
-        {
-          id: 1,
-          link: "Home",
-          child: (
-            <>
-              <AiFillHome size = {25} />
-            </>
-          ),
-        },
-        {
-          id: 2,
-          link: "About",
-          child: (
-            <>
-              <FcAbout size = {25} />
-            </>
-          )
-        },
-        {
-          id: 3,
-          link: "Contact",
-          child: (
-            <>
-              <GrMail size = {25} />
-            </>
-          )
-        },
+      {
+        id: 1,
+        link: "Home",
+        child: (
+          <>
+            <AiFillHome size = {25} />
+          </>
+        ),
+      },
+      {
+        id: 2,
+        link: "About",
+        child: (
+          <>
+            <FcAbout size = {25} />
+          </>
+        )
+      },
+      {
+        id: 3,
+        link: "Contact",
+        child: (
+          <>
+            <GrMail size = {25} />
+          </>
+        )
+      },
     ]
 
     return (
       <>
         <div className = 'navbar'>
           <div className = "flex">
-            <Image className = "rounded-full" src = {SalDappLogo} height = "0" width = "20" alt = ""/>
+            <div className = "w-8 h-5">
+              <Image className = "rounded-full" src = {SalDappLogo} height = "" width = "" alt = ""/>
+            </div>
             <h1 className = "text-2xl text-extrabold text-bold font-serif ml-2 max-sm:text-sm max-sm:ml-1 max-md:mr-3 font-title">DAPP.eth</h1>
           </div>
 

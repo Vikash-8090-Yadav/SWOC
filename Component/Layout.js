@@ -1,5 +1,5 @@
 import Carousel from "./Carousel";
-import Sidenav from "./Sidenav";
+import SideNavbar from "./SideNavbar";
 import AboutApp from "./AboutApp";
 
 export default function Layout({children}) {
@@ -9,7 +9,7 @@ export default function Layout({children}) {
     <>
       <div className = "">
         <Carousel/>
-        <Sidenav />
+        <SideNavbar />
         <AboutApp />
       </div>
     </>
