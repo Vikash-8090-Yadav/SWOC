@@ -1,10 +1,8 @@
-
 import React, {useState} from 'react'
 import {Link} from 'react-scroll';
 import {BiHome} from 'react-icons/bi'
 import {FcAbout} from 'react-icons/fc'
 import {GrMail} from 'react-icons/gr'
-import { useWeb3Modal, Web3Button, Web3NetworkSwitch } from '@web3modal/react'
 import LogoutButton from "../Component/LogoutButton"
 import SalDappLogo from "../public/images/sal-Dapp.png"
 import Image from "next/image"
@@ -42,14 +40,6 @@ const Navbar = ({ handleLogout }) => {
         },
     ]
 
-    const handleLogout1=()=>{
-      return handleLogout={handleLogout}
-    }
-    const handleWeb3ButtonClick = () => {
-      // code to handle web3 button click
-      setLogoutVisible(true);
-    }
-    
     return (
       <>
         <div className = 'navbar'>
@@ -78,13 +68,12 @@ const Navbar = ({ handleLogout }) => {
               ))}
           </ul>
                 
-          <div className="flex ">      
-            <Web3Button balance="show" icon="hide" label="Connect Wallet" />
-              { 
-                <div className = "py-2 px-3 mx-4 my-2 rounded-lg text-white bg-blue-400 font-bold">
-                  <LogoutButton handleLogout={handleLogout}/>
-                </div> 
-              } 
+          <div className="flex ">     
+            { 
+              <div className = "py-2 px-3 mx-4 my-2 rounded-lg text-white bg-blue-400 font-bold">
+                <LogoutButton handleLogout={handleLogout}/>
+              </div> 
+            } 
           </div>
         </div>
       </>
