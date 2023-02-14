@@ -5,11 +5,11 @@ import BlockChain from "../images/blockchain.png";
 const AboutApp = () => {
   return (
     <>
-      <div name = "About" className = "w-full py-10">
-        <h1 className = " text-center text-5xl py-5">About Us</h1>
-        <div className = "mx-auto flex flex-col items-center justify-between h-full px-4 md:px-8 my-3 md:flex-row">
-          <div className = "mb-5">
-            <Image src = {BlockChain} alt = "blockchain" width = "2500" height = "2000" /> 
+      <div name = "About" className = "w-full py-5">
+        <h1 className = " text-center text-5xl">About Us</h1>
+        <div className = "max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:px-8 my-3 md:flex-row">
+          <div>
+            <Image src = {BlockChain} alt = "blockchain" width = "4500" height = "4000" /> 
           </div>
           <div>
             <p className = "text-justify max-md:py-3">
