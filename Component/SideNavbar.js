@@ -88,6 +88,8 @@ function SideNavbar({children}) {
   return (
     <>
       <div name = "cards">
+          {children}
+
       <div className = "bg-black h-14 flex justify-between items-center cursor-pointer px-5 -mt-2 max-sm:px-8 shadow-2xl">
         <Link to = "#" className = "text-white">
           <FaBars onClick = {showSidebar} size = {25} />
@@ -112,10 +114,6 @@ function SideNavbar({children}) {
         </ul>
       </nav>
     </div>
-
-<div>
-          {children}
-          </div>
     </>
   )
 }
