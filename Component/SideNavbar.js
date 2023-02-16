@@ -8,7 +8,7 @@ import {MdNotificationImportant} from 'react-icons/md';
 import {AiFillSetting} from 'react-icons/ai'
 import {Web3Button} from '@web3modal/react';
 
-function SideNavbar() {
+function SideNavbar({children}) {
   const [Sidebar, setSidebar] = useState(false)
   const showSidebar = () => setSidebar(!Sidebar)
 
@@ -114,7 +114,7 @@ function SideNavbar() {
     </div>
 
 <div>
-          Hey  just doing for testing 
+          {children}
           </div>
     </>
   )
