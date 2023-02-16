@@ -34,22 +34,7 @@ ul li{
 
 .font-title {
   font-family: Montserrat;
-}
-
-/* Main Navbar Styles */
-
-.navbar {
-  margin: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  min-width: 100%;
-  overflow: hidden;
-  height: 50px;
-  padding: 0 1rem;
-  color: #fff;
-  position: relative;
-  z-index: 10000;
+  font-weight: bolder;
 }
 
 /* Sidebar Styles */
@@ -57,7 +42,7 @@ ul li{
 .nav-menu {
   background-color: #fff;
   width: 250px;
-  height: 92vh;
+  height: 90vh;
   display: flex;
   justify-content: center;
   position: relative;
@@ -71,6 +56,7 @@ ul li{
   left: 0;
   transition: 350ms;
 }
+
 
 @media(max-width: 640px) {
   .display {

@@ -87,23 +87,22 @@ function SideNavbar() {
 
   return (
     <>
-      <Sticky enabled={true} top={50} bottomBoundary={0}>
-        <div className = "bg-black h-14 flex justify-between items-center cursor-pointer px-5 shadow-md z-50">
-          <Link to = "#" className = "">
-            <FaBars onClick = {showSidebar} size = {25} />
-          </Link>
-          <button className = "pl-8 py-4 text-xl font-bold">
-            <Web3Button balance="show" icon="hide" label="Connect Wallet" />
-          </button>
-        </div>
-      </Sticky>
+      <div name = "cards">
+      <div className = "bg-black h-14 flex justify-between items-center cursor-pointer px-5 -mt-2 max-sm:px-8 shadow-2xl">
+        <Link to = "#" className = "text-white">
+          <FaBars onClick = {showSidebar} size = {25} />
+        </Link>
+        <button className = "pl-8 py-4 text-xl font-bold">
+          <Web3Button balance="show" icon="hide" label="Connect Wallet" />
+        </button>
+      </div>
 
       <nav className = {Sidebar ? 'nav-menu active' : 'nav-menu'}>
         <ul className = "w-full">
           {
             links.map(({id, title, link, icon}) => (
               <li key = {id}>
-                <Link to = {link} smooth duration={50} className = "flex justify-start items-center py-2 px-4 h-14 my-2 rounded-lg text-xl text-blue-400 bg-white font-semibold hover:bg-blue-400 hover:text-white cursor-pointer" onClick = {showSidebar}>
+                <Link to = {link} smooth duration={50} className = "flex justify-start items-center py-2 px-4 h-14 my-2 text-xl text-blue-500 bg-white font-bold hover:bg-blue-500 hover:text-white cursor-pointer border-b-2 border-black" onClick = {showSidebar}>
                   {icon}
                   <span className = "ml-4">{title}</span>
                 </Link>        
@@ -112,6 +111,7 @@ function SideNavbar() {
           }
         </ul>
       </nav>
+    </div>
     </>
   )
 }

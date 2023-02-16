@@ -1,9 +1,9 @@
 import React, {useState} from 'react'
 import {Link} from 'react-scroll';
-import Sticky from 'react-stickynode';
 import {AiFillHome} from 'react-icons/ai'
 import {FcAbout} from 'react-icons/fc'
-import {GrMail, GrTechnology} from 'react-icons/gr'
+import {HiLightBulb} from 'react-icons/hi'
+import {GrMail} from 'react-icons/gr'
 import LogoutButton from "../Component/LogoutButton"
 import SalDappLogo from "../public/images/sal-Dapp.png"
 import Image from "next/image"
@@ -23,6 +23,16 @@ const Navbar = ({ handleLogout }) => {
     },
     {
       id: 2,
+      link: "cards",
+      child: (
+        <>
+          <FcAbout size = {25} />
+        </>
+      ),
+      name: "Cards",
+    },
+    {
+      id: 3,
       link: "About",
       child: (
         <>
@@ -32,17 +42,17 @@ const Navbar = ({ handleLogout }) => {
       name: "About",
     },
     {
-      id: 3,
+      id: 4,
       link: "Tech",
       child: (
         <>
-          <GrTechnology size = {25} />
+          <HiLightBulb size = {25} />
         </>
       ),
       name: "Tech used",
     },
     {
-      id: 4,
+      id: 5,
       link: "Contact",
       child: (
         <>
@@ -55,40 +65,39 @@ const Navbar = ({ handleLogout }) => {
 
   return (
     <>
-      <Sticky enabled={true} top={0} bottomBoundary={0}>
-        <div className = 'navbar'>
-          <div className = "flex">
-            <div className = "w-6 h-6">
-              <Image className = "rounded-full" src = {SalDappLogo} height = "" width = "" alt = ""/>
-            </div>
-            <h1 className = "text-2xl font-bold text-blue-400 font-serif ml-2 max-sm:text-sm max-sm:ml-1 max-md:mr-3 font-title">DAPP.eth</h1>
+      <div className = 'navbar bg-white m-0 flex justify-between items-center min-w-full overflow-hidden h-12 py-0 px-4 text-blue-500 fixed z-50'>
+        <div className = "flex">
+          <div className = "w-10 h-10 pt-1">
+            <Image className = "rounded-full" src = {SalDappLogo} height = "" width = "" alt = ""/>
           </div>
-
-          <ul className = "hidden md:flex text-blue-400">
-            {links.map(({id, link, name}) => (
-              <li key = {id} className = "px-4 cursor-pointer md:hover:scale-125 duration-300 capitalize text-xl font-bold">
-                {link === 'Logout' ? 
-                  <a className = "hidden" onClick={handleLogout}>{link}</a> : 
-                  <Link to={link} smooth duration={50}>{name}</Link>
-                }        
-              </li>
-            ))}
-          </ul>
-
-          <ul className = "md:hidden flex text-blue-400 font-extrabold text-xl">
-            {
-              links.map(({id, link, child}) => (
-                <li key = {id} className = "px-4 cursor-pointer py-6 text-2xl capitalize max-sm:px-1">
-                  <Link onClick = {() => setNav(!nav)} to={link} smooth duration={5000}>{child}</Link>
-                </li>
-              ))}
-          </ul>
-          
-          <div className = "py-2 px-3 m-2 rounded-lg text-white bg-blue-400 font-bold max-sm:p-1 max-sm:m-1">
-            <LogoutButton handleLogout={handleLogout}/>
-          </div>
+          <h1 className = "text-2xl font-extrabold text-blue-500 ml-2 max-sm:text-sm max-sm:ml-1 max-md:mr-3 font-title pt-1">DAPP.eth</h1>
         </div>
-      </Sticky>  
+
+        <ul className = "hidden md:flex text-blue-500">
+          {links.map(({id, link, name}) => (
+            <li key = {id} className = "px-4 cursor-pointer md:hover:scale-125 duration-300 capitalize text-xl font-bold">
+              {link === 'Logout' ? 
+                <a className = "hidden" onClick={handleLogout}>{link}</a> : 
+                <Link to={link} smooth duration={50}>{name}</Link>
+              }        
+            </li>
+          ))}
+        </ul>
+
+        <ul className = "md:hidden flex font-extrabold text-xl text-blue-500">
+          {
+            links.map(({id, link, child}) => (
+              <li key = {id} className = "px-4 cursor-pointer py-6 text-2xl capitalize max-sm:px-1">
+                <Link onClick = {() => setNav(!nav)} to={link} smooth duration={5000}>{child}</Link>
+              </li>
+            ))
+          }
+        </ul>
+          
+        <div className = "py-2 px-3 m-2 rounded-lg text-white bg-blue-500 font-bold max-sm:p-1 max-sm:m-1">
+          <LogoutButton handleLogout={handleLogout}/>
+        </div>
+      </div>
     </>
   );
 };
