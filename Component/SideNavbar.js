@@ -88,7 +88,7 @@ function SideNavbar({children}) {
   return (
     <>
       <div name = "cards">
-          {children}
+          
 
       <div className = "bg-black h-14 flex justify-between items-center cursor-pointer px-5 -mt-2 max-sm:px-8 shadow-2xl">
         <Link to = "#" className = "text-white">
@@ -98,7 +98,7 @@ function SideNavbar({children}) {
           <Web3Button balance="show" icon="hide" label="Connect Wallet" />
         </button>
       </div>
-
+      {children}
       <nav className = {Sidebar ? 'nav-menu active' : 'nav-menu'}>
         <ul className = "w-full">
           {
