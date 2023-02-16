@@ -4,7 +4,7 @@ import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter, FaYoutube, FaDribbble }
 function Footer() {
   return (
     <>
-      <div className = "bg-gray-300 h-1/3 w-full flex md:flex-row flex-col justify-between items-center p-0 pt-6 mt-10 shadow-2xl">
+      <div className = "bg-gray-300 h-1/3 w-full flex md:flex-row flex-col justify-between items-center p-0 pt-6 shadow-2xl">
         <div className = "p-5">
           <ul>
             <p className = "text-gray-800 font-bold text-4xl pb-6 font-title">

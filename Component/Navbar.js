@@ -53,7 +53,7 @@ const Navbar = ({ handleLogout }) => {
     },
     {
       id: 5,
-      link: "Contact",
+      link: "contact",
       child: (
         <>
           <GrMail size = {25} />
@@ -68,9 +68,9 @@ const Navbar = ({ handleLogout }) => {
       <div className = 'navbar bg-white m-0 flex justify-between items-center min-w-full overflow-hidden h-12 py-0 px-4 text-blue-500 fixed z-50'>
         <div className = "flex">
           <div className = "w-10 h-10 pt-1">
-            <Image className = "rounded-full" src = {SalDappLogo} height = "" width = "" alt = ""/>
+            <Image className = "rounded-full" src = {SalDappLogo} height = "30" width = "30" alt = ""/>
           </div>
-          <h1 className = "text-2xl font-extrabold text-blue-500 ml-2 max-sm:text-sm max-sm:ml-1 max-md:mr-3 font-title pt-1">DAPP.eth</h1>
+          <h1 className = "text-2xl font-extrabold text-blue-500 ml-2 max-md:text-base max-sm:ml-1 max-md:mr-3 font-title max-md:pt-2 pt-1">DAPP.eth</h1>
         </div>
 
         <ul className = "hidden md:flex text-blue-500">
