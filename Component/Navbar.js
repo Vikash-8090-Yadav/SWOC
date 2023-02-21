@@ -49,7 +49,7 @@ const Navbar = ({ handleLogout }) => {
           <BsFillTelephoneFill size = {25} />
         </>
       ),
-      name: "Contact"
+      name: "Support Me"
     },
   ]
 
