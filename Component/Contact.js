@@ -3,8 +3,8 @@ import React from 'react'
 function Contact() {
   return (
     <>
-      <div name = "contact" className = "w-full py-5 mt-1 bg-gradient-to-b from-gray-800 to-black text-white">
-        <h1 className = "text-4xl pt-8 pb-4 px-24 font-semibold underline max-md:text-center text-white">Buy Me a Coffee</h1>
+      <div name = "contact" className = "w-full py-5 bg-gradient-to-b from-gray-800 to-black text-white">
+        <h1 className = "text-4xl pt-8 pb-4 px-24 font-semibold max-md:text-center text-white">Buy Me a Coffee</h1>
         <p className = "text-lg pb-4 px-24 font-semibold max-md:text-center text-gray-500">Submit the form below to support me.</p>
         <div className = "mx-auto flex flex-col items-center justify-center h-full px-4 md:px-8 my-3">
           <form className = "w-full flex flex-col items-center justify-center">

@@ -96,20 +96,23 @@ function SideNavbar() {
         </button>
       </div>
 
-      <nav className = {Sidebar ? 'nav-menu active' : 'nav-menu'}>
-        <ul className = "w-full">
-          {
-            links.map(({id, title, link, icon}) => (
-              <li key = {id}>
-                <Link to = {link} smooth duration={50} className = "flex justify-start items-center py-2 px-4 h-14 my-2 text-xl text-blue-500 bg-white font-bold hover:bg-blue-500 hover:text-white cursor-pointer border-b-2 border-black" onClick = {showSidebar}>
-                  {icon}
-                  <span className = "ml-4">{title}</span>
-                </Link>        
-              </li>
-            ))
-          }
-        </ul>
-      </nav>
+      <div className = "bg-gradient-to-b from-black to-gray-800 text-white flex">
+        <nav className = {Sidebar ? 'nav-menu active' : 'nav-menu'}>
+          <ul className = "w-full">
+            {
+              links.map(({id, title, link, icon}) => (
+                <li key = {id}>
+                  <Link to = {link} smooth duration={50} className = "flex max-md:flex-row-reverse justify-start items-center py-2 px-4 h-14 my-2 text-xl text-blue-500 bg-white font-bold hover:bg-blue-500 hover:text-white cursor-pointer border-b-2 border-black" onClick = {showSidebar}>
+                    {icon}
+                    <span className = "ml-4 max-lg:hidden">{title}</span>
+                  </Link>        
+                </li>
+              ))
+            }
+          </ul>
+        </nav>
+        <p className = "p-4">A blockchain is a distributed ledger with growing lists of records (blocks) that are securely linked together via cryptographic hashes. Each block contains a cryptographic hash of the previous block, a timestamp, and transaction data (generally represented as a Merkle tree, where data nodes are represented by leaves). The timestamp proves that the transaction data existed when the block was created. Since each block contains information about the previous block, they effectively form a chain (compare linked list data structure), with each additional block linking to the ones before it. Consequently, blockchain transactions are irreversible in that, once they are recorded, the data in any given block cannot be altered retroactively without altering all subsequent blocks.</p>
+      </div>
     </div>
     </>
   )

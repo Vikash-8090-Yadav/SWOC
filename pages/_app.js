@@ -132,7 +132,7 @@ function MyApp({ Component, pageProps = {} }) {
                 <div className = "right flex flex-col shadow-xl drop-shadow-xl justify-evenly ">
                   <div className = "text-center">
               
-                    <section className = 'w-3/4 h-3/4 mx-auto flex flex-col gap-10'>
+                    <section className = 'w-3/4 h-3/4 mx-auto flex flex-col gap-10 max-sm:w-11/12'>
                       <div className = "title">
                         <h1 className = 'text-gray-800 text-4xl font-bold py-4'>Sal dAPP</h1>
                         <p className = 'w-3/4 mx-auto text-gray-500'> --- Transparency in one click --- </p>

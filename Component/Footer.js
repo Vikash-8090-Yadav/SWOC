@@ -60,7 +60,7 @@ function Footer() {
       </div>
 
       <div className = "bg-gray-600 text-gray-400 flex max-sm:flex-col justify-between items-center px-10 py-1 font-semibold text-center">
-        <div>© 2022-2023 Meta.eth™. All Rights Reserved.</div>
+        <div className = "text-base">© 2022-2023 Meta.eth™. All Rights Reserved.</div>
         <div className = "flex justify-center items-center gap-4">
             <FaDribbble className = "text-xl cursor-pointer" />
             <FaFacebook className = "text-xl cursor-pointer" />
