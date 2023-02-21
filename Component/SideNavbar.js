@@ -7,7 +7,7 @@ import {MdNotificationImportant} from 'react-icons/md';
 import {AiFillSetting} from 'react-icons/ai'
 import {Web3Button} from '@web3modal/react';
 
-function SideNavbar() {
+function SideNavbar({children}) {
   const [Sidebar, setSidebar] = useState(false)
   const showSidebar = () => setSidebar(!Sidebar)
 
@@ -112,7 +112,7 @@ function SideNavbar() {
           </ul>
         </nav>
         <p className = "px-6 max-h-fit text-justify overflow-y-scroll">
-          A blockchain is a distributed ledger with growing lists of records (blocks) that are securely linked together via cryptographic hashes. Each block contains a cryptographic hash of the previous block, a timestamp, and transaction data (generally represented as a Merkle tree, where data nodes are represented by leaves). The timestamp proves that the transaction data existed when the block was created. Since each block contains information about the previous block, they effectively form a chain (compare linked list data structure), with each additional block linking to the ones before it. Consequently, blockchain transactions are irreversible in that, once they are recorded, the data in any given block cannot be altered retroactively without altering all subsequent blocks.
+          {children}
         </p>
       </div>
     </div>
