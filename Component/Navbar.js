@@ -1,9 +1,9 @@
 import React, {useState} from 'react'
 import {Link} from 'react-scroll';
 import {AiFillHome} from 'react-icons/ai'
+import {FaDatabase} from 'react-icons/fa';
 import {FcAbout} from 'react-icons/fc'
-import {HiLightBulb} from 'react-icons/hi'
-import {GrMail} from 'react-icons/gr'
+import {BsFillTelephoneFill} from 'react-icons/bs'
 import LogoutButton from "../Component/LogoutButton"
 import SalDappLogo from "../public/images/sal-Dapp.png"
 import Image from "next/image"
@@ -26,7 +26,7 @@ const Navbar = ({ handleLogout }) => {
       link: "cards",
       child: (
         <>
-          <FcAbout size = {25} />
+          <FaDatabase size = {25} />
         </>
       ),
       name: "Cards",
@@ -43,20 +43,10 @@ const Navbar = ({ handleLogout }) => {
     },
     {
       id: 4,
-      link: "Tech",
-      child: (
-        <>
-          <HiLightBulb size = {25} />
-        </>
-      ),
-      name: "Tech used",
-    },
-    {
-      id: 5,
       link: "contact",
       child: (
         <>
-          <GrMail size = {25} />
+          <BsFillTelephoneFill size = {25} />
         </>
       ),
       name: "Contact"

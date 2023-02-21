@@ -11,7 +11,7 @@ export default function Layout({children}) {
   return (
     <>
       <div className = "">
-        <Carousel/>
+        <Carousel/> 
         <SideNavbar />
         <AboutApp />
         <Testimonial />

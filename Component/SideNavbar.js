@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import {Link} from 'react-scroll';
-import Sticky from 'react-stickynode';
 import {FaBars, FaFileContract, FaNewspaper, FaClipboardList} from 'react-icons/fa';
 import {BsFillPersonPlusFill} from 'react-icons/bs';
 import {IoWalletSharp} from 'react-icons/io5';
