@@ -96,7 +96,7 @@ function SideNavbar() {
         </button>
       </div>
 
-      <div className = "bg-gradient-to-b from-black to-gray-800 text-white flex">
+      <div className = "bg-gradient-to-b from-black to-gray-800 text-white flex justify-between">
         <nav className = {Sidebar ? 'nav-menu active' : 'nav-menu'}>
           <ul className = "w-full">
             {
@@ -111,7 +111,9 @@ function SideNavbar() {
             }
           </ul>
         </nav>
-        <p className = "p-8 max-h-fit text-justify overflow-y-scroll">A blockchain is a distributed ledger with growing lists of records (blocks) that are securely linked together via cryptographic hashes. Each block contains a cryptographic hash of the previous block, a timestamp, and transaction data (generally represented as a Merkle tree, where data nodes are represented by leaves). The timestamp proves that the transaction data existed when the block was created. Since each block contains information about the previous block, they effectively form a chain (compare linked list data structure), with each additional block linking to the ones before it. Consequently, blockchain transactions are irreversible in that, once they are recorded, the data in any given block cannot be altered retroactively without altering all subsequent blocks.</p>
+        <p className = "px-6 max-h-fit text-justify overflow-y-scroll">
+          A blockchain is a distributed ledger with growing lists of records (blocks) that are securely linked together via cryptographic hashes. Each block contains a cryptographic hash of the previous block, a timestamp, and transaction data (generally represented as a Merkle tree, where data nodes are represented by leaves). The timestamp proves that the transaction data existed when the block was created. Since each block contains information about the previous block, they effectively form a chain (compare linked list data structure), with each additional block linking to the ones before it. Consequently, blockchain transactions are irreversible in that, once they are recorded, the data in any given block cannot be altered retroactively without altering all subsequent blocks.
+        </p>
       </div>
     </div>
     </>
