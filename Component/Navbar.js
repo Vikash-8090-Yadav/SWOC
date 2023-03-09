@@ -4,6 +4,7 @@ import {AiFillHome} from 'react-icons/ai'
 import {FaDatabase} from 'react-icons/fa';
 import {FcAbout} from 'react-icons/fc'
 import {BsFillTelephoneFill} from 'react-icons/bs'
+import {Web3Button} from '@web3modal/react';
 import LogoutButton from "../Component/LogoutButton"
 import SalDappLogo from "../public/images/sal-Dapp.png"
 import Image from "next/image"
@@ -29,7 +30,7 @@ const Navbar = ({ handleLogout }) => {
           <FaDatabase size = {25} />
         </>
       ),
-      name: "Cards",
+      name: "Data",
     },
     {
       id: 3,
@@ -83,9 +84,16 @@ const Navbar = ({ handleLogout }) => {
             ))
           }
         </ul>
-          
-        <div className = "py-2 px-3 m-2 rounded-lg text-white bg-blue-500 font-bold max-sm:p-1 max-sm:m-1">
-          <LogoutButton handleLogout={handleLogout}/>
+
+        <div className="flex ">    
+          <button className = "pl-8 py-4 text-xl font-bold">  
+            <Web3Button balance="show" icon="hide" label="Connect Wallet" />
+          </button>
+          {/* { 
+            <div className = "py-2 px-3 m-2 rounded-lg text-white bg-blue-500 font-bold max-sm:p-1 max-sm:m-1">
+              <LogoutButton handleLogout={handleLogout}/>
+            </div> 
+          }  */}
         </div>
       </div>
     </>

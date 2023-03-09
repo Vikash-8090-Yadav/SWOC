@@ -6,7 +6,7 @@ function Carousel() {
   return (
     <>
       <div name = "Home" id = "Home">
-        <Image src ={hero} width ={4000} height = {1750} alt =""/>
+        <Image src ={hero} width ={4000} height = {1900} alt =""/>
       </div>
     </>
   )

@@ -86,6 +86,7 @@ function MyApp({ Component, pageProps = {} }) {
   }, []);
 
   return (
+    <>
     <div>
       <div>
         {loading ? (
@@ -153,8 +154,8 @@ function MyApp({ Component, pageProps = {} }) {
                 
                         <div className = "input-button flex">
                           <button  onClick={() => login('google')} type='button' className = "w-full py-3 flex justify-center gap-5">
-                            <Image src={'/assets/google.svg'} width = "30" height = "30" />
-                            <Image src={'/assets/github.svg'} width = "37" height = "37" />
+                            <Image src={'/assets/google.svg'} width = "30" height = "30"alt="" />
+                            <Image src={'/assets/github.svg'} width = "37" height = "37"alt="" />
                           </button>
                         </div>
                       </form>
@@ -167,6 +168,7 @@ function MyApp({ Component, pageProps = {} }) {
         }
       </div>
     </div>
+    </>
   );
 }
 
