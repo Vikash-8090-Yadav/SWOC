@@ -4,6 +4,8 @@ import AboutApp from "./AboutApp";
 import Test from "./Test";
 import Contact from "./Contact";
 import Footer from "./Footer";
+import Mainc from "./mnc"
+
 export default function Layout({children}) {
 
   console.log(children);
@@ -16,7 +18,13 @@ export default function Layout({children}) {
       
       <div className = "">
         <Carousel/> 
+         <lms className = "h-screen flex flex-row justify-start"> {/* This lsm stand for the LEFT MAIN  and RIGHT-SIDE*/}
         <SideNavbar />
+        <div className = "flex-1 p-4 text-white bg-gray-300">
+          <Mainc>{children}</Mainc>
+        </div>
+      </lms>
+    
         <AboutApp />
         <Test />
         <Contact />
